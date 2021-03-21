@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductosService } from '../../productos.service';
 import { Product } from '../../product.model';
 
 @Component({
@@ -8,92 +9,15 @@ import { Product } from '../../product.model';
 })
 export class HomeComponent implements OnInit {
 
-  products: Product[] = [
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    },
-    {
-      id: 'hash123',
-      title: 'TOMATOES',
-      description: 'RED TOMAT',
-      image: 'tomato.jpg',
-      price: 30,
-      stars: 4
-    }
-  ]  
+  products:Product[] = []
 
-  constructor() { }
+  constructor( private productsService: ProductosService) { }
 
   ngOnInit(): void {
+    this.products = this.productsService.getProducts()
+    console.log(this.productsService.getProduct('hash123'));
+    
+    
   }
   onSwiper(swiper) {
     console.log(swiper);

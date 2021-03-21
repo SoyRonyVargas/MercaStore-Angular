@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="ui segment ">
+        <div class="ui grid">
+            <div class="five wide column">
+                <!-- <img class="ui fluid image" [src]="'assets/images/products/'+{{product.image}}"/> -->
+                <img class="fluid image ui" [src]="'assets/images/products/'+product.image" />
+            </div>
+            <div class="eleven wide column">
+
+                <h1 class="ui header title-section" style="margin-bottom: 0;text-align: left;"> {{product.title}} </h1>
+
+                <div class="ui divider"></div>
+
+                <div>
+                    <a class="ui teal tag label big"> ${{ product.price }} </a>
+                </div>
+                <div class="ui divider"></div>
+
+                <div class="ui action input">
+                    <input placeholder="Quantity" min="1" step="1" type="number" value="1">
+                    <button class="ui green button"><i aria-hidden="true" class="plus cart icon"></i>Add to
+                        Cart</button>
+                </div>
+
+                <div class="ui divider"></div>
+
+                <button class="ui button">
+                    Button
+                </button>
+                <div class="ui button" tabindex="0">
+                    Focusable
+                </div>
+
+                <div class="ui divider"></div>
+
+                <div class="ui vertical steps fluid mini">
+                    <div class="completed step">
+                        <i class="truck icon"></i>
+                        <div class="content">
+                            <div class="title">Shipping</div>
+                            <div class="description">Choose your shipping options</div>
+                        </div>
+                    </div>
+                    <div class="completed step">
+                        <i class="credit card icon"></i>
+                        <div class="content">
+                            <div class="title">Billing</div>
+                            <div class="description">Enter billing information</div>
+                        </div>
+                    </div>
+                    <div class="active step">
+                        <i class="info icon"></i>
+                        <div class="content">
+                            <div class="title">Confirm Order</div>
+                            <div class="description">Verify order details</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui segment ">
+        <div class="ui tabular menu">
+            <a class="item">
+              Bio
+            </a>
+            <a class="item active">
+              Photos
+            </a>
+          </div>
+    </div>
+</div>

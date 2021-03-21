@@ -25,6 +25,7 @@ import { GridbannersComponent } from './components/gridbanners/gridbanners.compo
 import { CategoriasComponent } from './components/categorias/categorias.component';
 import { RenderproductsComponent } from './components/renderproducts/renderproducts.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { LayoutComponent } from './components/layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     GridbannersComponent,
     CategoriasComponent,
     RenderproductsComponent,
-    NavbarComponent
+    NavbarComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,

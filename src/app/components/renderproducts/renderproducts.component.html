@@ -7,7 +7,7 @@
     <div class="ui stackable five column grid">
 
         <div class="column todoflex" *ngFor="let product of products">
-            <div class="card ui ">
+            <a routerLink="/productos/{{product.id}}" class="card ui ">
                 <div class="content">
                     <div class="card__uiImage">
                         <img
@@ -39,7 +39,7 @@
                         <!-- <div class="ui  red button">Decline</div> -->
                     </div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 
