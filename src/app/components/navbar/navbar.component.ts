@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  isVisible:boolean = false
+
+  constructor() {
+    
+  }
+
+  handleVisible( e ) : void {
+
+    e.preventDefault()
+
+    this.isVisible = !this.isVisible
+
+    console.log(this.isVisible);
+    
+
+  }
+  
 
   ngOnInit(): void {
+    console.log(document.querySelector('.ui.sidebar'));
+    // document.querySelector('.ui.sidebar').sidebar('toggle')
   }
 
 }

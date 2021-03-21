@@ -1,0 +1,16 @@
+
+.handle-mobile-menu
+{
+    display: none !important;
+}
+@media (max-width: 480px)
+{
+    .handle-mobile-unmountmenu
+    {
+        display: none !important;
+    }
+    .handle-mobile-menu
+    {
+        display: block !important;
+    }
+}

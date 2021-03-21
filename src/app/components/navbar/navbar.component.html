@@ -1,10 +1,30 @@
 <div class="container">
-    <div style="padding: 12px 0;">
-
-        <div class="ui three padded item menu" >
-            <a class="active item">Editorials</a>
-            <a class="item">Reviews</a>
-            <a class="item">Upcoming Events</a>
+    <div style="padding: 0px 0;">
+        <div class="ui large  secondary network menu">
+            <!-- <a class="active item">Editorials</a> -->
+            <div class="view-ui item handle-mobile-menu">
+                <a (click)="handleVisible($event)" href="" class="ui viewui icon item">
+                    <i class="sidebar icon"></i>
+                </a>
+            </div>
+            <div class="view-ui item handle-mobile-unmountmenu">
+                <a routerLink="/productos" class="item view-ui">Productos</a>
+                <a routerLink="/productos" class="item view-ui">Categorias</a>
+            </div>
         </div>
     </div>
+</div>
+<div class="ui sidebar dimmed inverted vertical menu" [ngClass]="isVisible ? 'visible uncover left animating autumn leaf' : ''">
+    <a class="item">
+        1
+    </a>
+    <a class="item">
+        2
+    </a>
+    <a class="item">
+        3
+    </a>
+</div>
+<div class="pusher">
+    <!-- Site content !-->
 </div>
