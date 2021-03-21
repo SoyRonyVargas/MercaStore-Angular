@@ -1,0 +1,32 @@
+<!-- <div class="product">
+    <h1>
+        {{ product.title }}
+    </h1>
+    <h2> ${{product.price}} </h2>
+    <img 
+        style="max-width: 100%;"
+        src="{{product.image}}" 
+        alt="{{product.title}}"
+    />
+    <button (click)="agregarAlCarrito()">Agregar Carrito</button>
+</div> -->
+<mat-card class="example-card">
+    <mat-card-header>
+        <!-- <div mat-card-avatar class="example-header-image"></div> -->
+        <mat-card-title> {{ product.title | uppercase }} </mat-card-title>
+        <mat-card-subtitle> $Price: {{product.price | currency:'MXN' }} </mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image width="100%" height="300px" style="object-fit: contain;" src="{{product.image}}" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+        <p>
+            {{ product.description | slice:0:20 }}
+        </p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button color="primary" mat-raised-button  mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+            <!-- Add To Cart -->
+            <mat-icon>home</mat-icon>
+        </button>
+        <!-- <button mat-button>SHARE</button> -->
+    </mat-card-actions>
+</mat-card>

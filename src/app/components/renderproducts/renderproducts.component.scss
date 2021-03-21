@@ -1,0 +1,52 @@
+.card__ui
+{
+    width: 100%;
+    max-width: 300px;
+    min-width: 290px;
+    background:#fff !important;
+    box-sizing:border-box;
+    padding: 1rem;
+    border-radius: 8px;
+    transition:300ms;
+    &:hover
+    {
+        box-shadow: 1px 1px 10px 2px rgba(0,0,0,.1);
+    }
+}
+.card__uiImage
+{
+    width:70%;
+    background-color:red;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    img
+    {
+        max-width:100%;
+        width:100%;
+        object-fit:cover;
+    }
+}
+.card__uiTitle
+{
+    color:#8FC657;
+    font-weight: 700;
+    margin: 0;
+    text-align:center !important;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Poppins' !important;
+    text-transform: uppercase;
+}
+.card__uiPrice
+{
+    color:#222;
+    font-weight: 800;
+    margin: 0;
+    text-align:center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Poppins' !important;
+    text-transform: uppercase;
+}

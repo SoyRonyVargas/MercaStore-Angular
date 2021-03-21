@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<app-carousel></app-carousel>
+
+<div class="container">
+  <app-gridbanners></app-gridbanners>
+  <app-categorias></app-categorias>
+  <app-renderproducts [products]="products" [title]="'PRODUCTOS POPULARES'"></app-renderproducts>
+</div>
+<!-- <swiper
+      [slidesPerView]="1"
+      [spaceBetween]="50"
+      (swiper)="onSwiper($event)"
+      (slideChange)="onSlideChange()"
+    >
+      <ng-template swiperSlide *ngFor="let image of images">
+            <img style="max-width: 100%; width: 100%;" [src]="'assets/images/'+image" alt="">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+      </ng-template>
+    </swiper> -->
+
+  

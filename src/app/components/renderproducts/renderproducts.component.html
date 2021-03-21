@@ -1,0 +1,49 @@
+<section>
+
+    <h2 class="title-section"> {{ title }} </h2>
+
+    <hr class="Line" />
+
+    <div class="ui stackable five column grid">
+
+        <div class="column todoflex" *ngFor="let product of products">
+            <div class="card ui ">
+                <div class="content">
+                    <div class="card__uiImage">
+                        <img
+                            class="fluid"
+                            [src]="'assets/images/products/'+product.image"
+                        />
+                    </div>
+                    <div class="card__uiTitle">
+                        {{ product.title }}
+                    </div>
+                    <div class="card__uiPrice">
+                        ${{ product.price }}
+                    </div>
+
+                    <div class="ui star rating mx-auto" style="width: 100%;margin: 0 auto;display: flex;justify-content:center;" data-rating="3">
+                        <i tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+                        <i tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+                        <i tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+                        <i tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+                        <i tabindex="0" aria-checked="false" aria-posinset="1" aria-setsize="5" class="active icon" role="radio"></i>
+                    </div>
+                </div>
+                <div class="extra content">
+
+                    <div class="ui two buttons">
+                        <div class="ui button icon">
+                            <i class="cart icon"></i>
+                        </div>
+                        <!-- <div class="ui  red button">Decline</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <button class="ui secondary button medium">
+        Okay
+      </button>
+</section>

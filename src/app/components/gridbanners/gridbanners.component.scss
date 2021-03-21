@@ -1,0 +1,42 @@
+.grid__banner
+{
+    width:100%;
+    display:grid;
+    grid-template-columns: 360px calc(100% - 360px);
+    div.selection
+    {
+        border:1px solid;
+        height: 530px;
+        background-color: red;
+    }
+    div img
+    {
+        max-width:100%;
+    }
+}
+.subgrid__banner
+{
+    display: grid;
+    grid-template-columns: 70% 30% ;
+    grid-template-rows: 100% ;
+    width:100%;
+    box-sizing:border-box;
+    height: 263px;
+    height: 250px;
+    a
+    {
+        display:flex;
+        justify-content:center;
+        width:100%; 
+        transition: 450ms;
+    }  
+    a:hover
+    {
+        /* transform: scale(1.025); */
+    }
+    img
+    {
+        object-fit:contain;
+        height:100%;
+    }
+}

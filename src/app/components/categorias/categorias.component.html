@@ -1,0 +1,33 @@
+
+    <h2 class="title-section">BUSCA POR CATEGORIAS</h2>
+
+    <hr class="Line">
+
+    <carousel 
+        class=""
+        [width]="" 
+        [height]="120"
+        [cellWidth]="120"
+        [arrows]=""
+        [borderRadius]="20"
+        [margin]="80"
+        [autoplay]="true"
+    >
+
+        <div class="carousel-cell" *ngFor="let image of images">
+            <img style="max-width: 90%; width: 100%;" [src]="'assets/images/images/categories/'+image" alt="">
+        </div>
+        <div class="carousel-cell" *ngFor="let image of images">
+            <img style="max-width: 100%; width: 100%;" [src]="'assets/images/images/categories/'+image" alt="">
+        </div>
+        <div class="carousel-cell" *ngFor="let image of images">
+            <img style="max-width: 100%; width: 100%;" [src]="'assets/images/images/categories/'+image" alt="">
+        </div>
+        <div class="carousel-cell" *ngFor="let image of images">
+            <img style="max-width: 100%; width: 100%;" [src]="'assets/images/images/categories/'+image" alt="">
+        </div>
+        <div class="carousel-cell" *ngFor="let image of images">
+            <img style="max-width: 100%; width: 100%;" [src]="'assets/images/images/categories/'+image" alt="">
+        </div>
+
+    </carousel>

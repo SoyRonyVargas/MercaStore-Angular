@@ -1,0 +1,87 @@
+<!-- <div class="container" appHighlight [backgroundColor]="'red'" [color]="'gray'"> -->
+    <div class="container">
+
+        <!-- ENLACE BIDIRECCIONAL -->
+        <!-- VISTA -> <- MODELO -->
+        <input type="text" [(ngModel)]="name" />
+        <!-- ENLACE DE UNA DIRECCION -->
+        <!-- VISTA <---- MODELO -->
+        <input type="text" [ngModel]="name" />
+        <h1>Heelo {{name}} </h1>
+    
+        
+        <h3>Aqui</h3>
+        <input type="text" [(ngModel)]="x" />
+    
+    
+        <h2>
+            variable {{ x  | testpipe }}
+        </h2>
+    
+        <div *ngIf="name == 'marrano'">
+            <h1>soy marrano y me muestro</h1>
+        </div>
+    
+        <!-- <div *ngIf="name == 'mario'">
+            <h1>soy mario y me muestro</h1>
+        </div> -->
+        <span [ngSwitch]="name">
+            <p *ngSwitchCase="'mario'">
+                es mario
+            </p>
+            <p *ngSwitchCase="'javier'">
+                es javier
+            </p>
+            <p *ngSwitchDefault>
+                default
+            </p>
+        </span>
+    
+        <button (click)="addItem()">
+            Agregar
+        </button>
+    
+        <ul>
+            <li *ngIf="array.length === 0">
+                no hay elementos
+            </li>
+            <li 
+                *ngFor="let item of array; index as i"
+            >
+                {{ item }} - {{i}}
+                <button (click)="deleteItem(i)">borrar</button>
+            </li>
+        </ul>
+    
+            <div
+                class="grid-productos"
+                
+            >
+            <div style="margin: 0 auto;" *ngFor="let product of products">
+                <app-product (AddToCart)="testeador($event)" [product]="product" ></app-product>
+            </div>
+            </div>
+    
+    <div >
+        <!-- <div>
+            <h1>
+                {{ product.title }}
+            </h1>
+            <h2> ${{product.price}} </h2>
+            <img 
+                style="max-width: 500px;"
+                src="{{product.image}}" 
+                alt="{{product.title}}"
+            />
+        </div>
+    -->
+        
+        <!-- <app-product (AddToCart)="testeador($event)" [product]="product" ></app-product> -->
+    
+    </div>
+    
+    <button (click)="destruir()">Destruir</button>
+    
+    
+    </div>
+    
